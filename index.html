@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>幸运转盘游戏</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1>幸运转盘</h1>
+<canvas id="wheel" width="500" height="500"></canvas>
+<button id="spin">开始抽奖</button>
+
+<script src="wheelofdestiny.js"></script>
+<script>
+  // 初始化转盘，按钮绑定等
+  const wheel = new WheelOfDestiny('wheel', [
+    '奖品1', '奖品2', '奖品3', '奖品4', '奖品5', '谢谢参与'
+  ]);
+  document.getElementById('spin').onclick = () => wheel.spin();
+</script>
+</body>
+</html>
